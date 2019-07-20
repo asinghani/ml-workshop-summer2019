@@ -4,9 +4,10 @@ body {
 
 #video {
     position: absolute;
-    left: 0;
-    right: 0;
+    left: -10vw;
+    right: 10vw;
     top: 0;
-    width: 100vw;
+    width: 120vw;
     height: auto;
+    max-height: 95vh;
 }
