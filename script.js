@@ -47,9 +47,7 @@ function classifyAndNext(model) {
             }
             else if(newClass == "") {
                 // card sliding out
-                animateCSS("#overlay", "slideOutDown", function() {
-                    document.getElementById("overlay").src = ""
-                })
+                document.getElementById("overlay").src = ""
             }
             else {
                 // change from one card to another
@@ -58,7 +56,6 @@ function classifyAndNext(model) {
 
             currentClass = newClass
         }
-
 
 
 		setTimeout(function() {
