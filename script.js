@@ -31,7 +31,7 @@ function classifyAndNext(model) {
 
         var newClass = ""
 
-        if(pred.includes("person")) {
+        if(pred.includes("apple")) {
             newClass = "apple"
         } else if(pred.includes("banana")) {
             newClass = "banana"
@@ -43,9 +43,7 @@ function classifyAndNext(model) {
             if(currentClass == "") {
                 // new card coming in
                 document.getElementById("overlay").src = getImage(newClass)
-                animateCSS("#overlay", "slideInUp", function() {
-
-                })
+                animateCSS("#overlay", "slideInUp")
             }
             else if(newClass == "") {
                 // card sliding out
