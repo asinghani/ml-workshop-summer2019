@@ -3,7 +3,11 @@ function classifyAndNext(model) {
         pred = pred.map(x => x.class)
         pred = pred.filter((value, index, arr) => arr.indexOf(value) == index)
 
-        document.getElementById("data").innerHTML = pred.join("<br>")
+        if(pred.includes("apple")) {
+            document.getElementById("overlay").src = "apple_overlay.png"
+        } else if(pred.includes("banana")) {
+            document.getElementById("overlay").src = "banana_overlay.png"
+        }
 
 		setTimeout(function() {
 			classifyAndNext(model)

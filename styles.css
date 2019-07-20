@@ -11,3 +11,12 @@ body {
     height: auto;
     max-height: 95vh;
 }
+
+#overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: auto;
+}
