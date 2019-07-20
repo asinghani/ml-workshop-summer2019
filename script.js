@@ -91,6 +91,7 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
     cocoSsd.load().then(model => {
         classifyAndNext(model)
+        alert("Loaded")
     });
 
 } else{
