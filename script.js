@@ -24,6 +24,16 @@ function getImage(objectClass) {
     }
 }
 
+function getSound(objectClass) {
+    if(objectClass == "apple") {
+        return "hotdog.mp3"
+    } else if(objectClass == "banana") {
+        return ""
+    } else {
+        return ""
+    }
+}
+
 function classifyAndNext(model) {
 	model.detect(video).then(pred => {
         pred = pred.map(x => x.class)
@@ -52,6 +62,12 @@ function classifyAndNext(model) {
             else {
                 // change from one card to another
                 document.getElementById("overlay").src = getImage(newClass)
+            }
+
+            var sound = getSound(newClass)
+            if(sound && sound.length > 0) {
+                var audio = new Audio(sound);
+                audio.play();
             }
 
             currentClass = newClass
