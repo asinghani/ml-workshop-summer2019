@@ -1,0 +1,14 @@
+Food Only:
+
+apple
+orange
+banana
+broccoli
+sandwich
+carrot
+pizza
+hot dog
+donut
+cake
+
+(See all_classes_coco.png for the rest)
