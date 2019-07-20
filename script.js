@@ -1,5 +1,7 @@
 var currentClass = ""
 
+var audioPlaying = false;
+
 function animateCSS(element, animationName, callback) {
     const node = document.querySelector(element)
     node.classList.add("animated", animationName)
@@ -65,9 +67,12 @@ function classifyAndNext(model) {
             }
 
             var sound = getSound(newClass)
-            if(sound && sound.length > 0) {
-                var audio = new Audio(sound);
-                audio.play();
+            if(sound && sound.length > 0 && !audioPlaying) {
+                audioPlaying = true
+                var audio = new Audio(sound)
+                audio.play()
+
+                setTimeout(function() { audioPlaying = false }, 3000)
             }
 
             currentClass = newClass
